@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/home/kazutaka/Downloads/aws-java-sdk-1.2.7/lib/aws-java-sdk-1.2.7.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/Downloads/commons-cli-1.2/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/Downloads/httpcomponents-client-4.1.2/lib/httpcore-4.1.2.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/Downloads/httpcomponents-client-4.1.2/lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/Downloads/httpcomponents-client-4.1.2/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/Downloads/httpcomponents-client-4.1.2/lib/httpclient-4.1.2.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/Downloads/httpcomponents-client-4.1.2/lib/httpclient-cache-4.1.2.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/Downloads/json_simple-1.1-all/lib/json_simple-1.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
