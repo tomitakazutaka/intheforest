@@ -1,0 +1,11 @@
+create keyspace CassandraBenchmark
+  with placement_strategy = 'NetworkTopologyStrategy'
+  and strategy_options = { DC1 : 2 , DC2 : 1 };
+
+use CassandraBenchmark;
+
+create column family CBench
+  with column_type = 'Standard'
+  and comparator = 'UTF8Type'
+  and default_validation_class = 'UTF8Type'
+  and key_validation_class = 'UTF8Type'

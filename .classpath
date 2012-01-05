@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/hector-core-0.8.0-2.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/speed4j-0.9.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/apache-cassandra-1.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/apache-cassandra-thrift-1.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/libthrift-0.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/commons-codec-1.5.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/high-scale-lib-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/guava-r08.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="/home/kazutaka/workspace/Cassandra_Benchmark/lib/slf4j-jdk14-1.6.4.jar"/>
+	<classpathentry kind="output" path="release"/>
+</classpath>

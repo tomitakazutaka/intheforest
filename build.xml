@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="Cassandra_Benchmark">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../usr/lib/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="JUnit 3.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/dropins/jdt/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar"/>
+    </path>
+    <path id="Cassandra_Benchmark.classpath">
+        <pathelement location="release"/>
+        <path refid="JUnit 3.libraryclasspath"/>
+        <pathelement location="../../Cassandra_Benchmark/commons-cli-1.2.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/hector-core-0.8.0-2.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/speed4j-0.9.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/apache-cassandra-1.0.1-SNAPSHOT.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/apache-cassandra-thrift-1.0.1-SNAPSHOT.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/libthrift-0.6.1.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/slf4j-api-1.6.4.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/commons-codec-1.5.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/high-scale-lib-1.1.1.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/guava-r08.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/commons-lang-2.4.jar"/>
+        <pathelement location="../../Cassandra_Benchmark/slf4j-jdk14-1.6.4.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="release"/>
+        <copy includeemptydirs="false" todir="release">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="release"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="release" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Cassandra_Benchmark.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="CBMain">
+        <java classname="jp.co.intheforest.CBMain" failonerror="true" fork="yes">
+            <classpath refid="Cassandra_Benchmark.classpath"/>
+        </java>
+    </target>
+</project>
